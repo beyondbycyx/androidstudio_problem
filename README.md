@@ -24,10 +24,12 @@ androidstudio使用过程中的问题，第三方库使用配置问题
 
 ### 4.Retrolambda 是一个在Android和预JDK8平台上的使用Lambda表达式语法的Java类库 配置时，Error:Execution failed for task : null/jre/lib/rt.jar does not exist, make sure that the environment variable JAVA_HOME
 
-
+```java
 retrolambda {
     jdk System.getenv("JAVA8_HOME") //这是由于，JAVA8_HOME是指向系统的jdk环境变量
     oldJdk System.getenv("JAVA7_HOME")
     javaVersion JavaVersion.VERSION_1_7
 }
-所以要去配置好所以要去配置“JAVA_HOME”，“path”，“classpath” ，可网搜下教程，android studio的sdk location那里也有配置Java jdk的路径选项
+```
+
+所以要去配置好所以要去配置“JAVA8_HOME”，“path”，“classpath” ，可网搜下教程，android studio的sdk location那里也有配置Java jdk的路径选项
